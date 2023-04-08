@@ -1,4 +1,4 @@
-package fr.snooker4real.movies;
+package fr.snooker4real.movies.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

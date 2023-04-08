@@ -1,6 +1,7 @@
-package fr.snooker4real.movies;
+package fr.snooker4real.movies.controller;
 
-import org.bson.types.ObjectId;
+import fr.snooker4real.movies.model.Movie;
+import fr.snooker4real.movies.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,11 +19,11 @@ public class MovieController {
 
     @GetMapping
     public ResponseEntity<List<Movie>> getAllMovies() {
-        return new ResponseEntity<List<Movie>>(movieService.allMovies(), HttpStatus.OK);
+        return new ResponseEntity<>(movieService.allMovies(), HttpStatus.OK);
     }
 
     @GetMapping("/{imdbId}")
     public ResponseEntity<Optional<Movie>> getSingleMovieById(@PathVariable String imdbId) {
-        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(imdbId), HttpStatus.OK);
+        return new ResponseEntity<>(movieService.singleMovie(imdbId), HttpStatus.OK);
     }
 }
