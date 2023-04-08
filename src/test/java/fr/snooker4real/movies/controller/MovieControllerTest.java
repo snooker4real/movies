@@ -38,7 +38,7 @@ public class MovieControllerTest {
     @Test
     public void testGetAllMovies() {
         // create some test data
-        List<Movie> movies = new ArrayList<Movie>();
+        List<Movie> movies = new ArrayList<>();
         movies.add(new Movie(new ObjectId(), "imdbId1", "title1", "2023-02-03", "trailerLink1", "poster1", null, null, null));
         movies.add(new Movie(new ObjectId(), "imdbId2", "title2", "2023-02-03", "trailerLink2", "poster2", null, null, null));
         movies.add(new Movie(new ObjectId(), "imdbId3", "title3", "2023-02-03", "trailerLink3", "poster3", null, null, null));
