@@ -1,5 +1,7 @@
-package fr.snooker4real.movies;
+package fr.snooker4real.movies.controller;
 
+import fr.snooker4real.movies.model.Review;
+import fr.snooker4real.movies.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

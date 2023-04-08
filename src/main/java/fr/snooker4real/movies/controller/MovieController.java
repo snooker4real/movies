@@ -1,6 +1,7 @@
-package fr.snooker4real.movies;
+package fr.snooker4real.movies.controller;
 
-import org.bson.types.ObjectId;
+import fr.snooker4real.movies.model.Movie;
+import fr.snooker4real.movies.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,7 @@
-package fr.snooker4real.movies;
+package fr.snooker4real.movies.service;
 
-import org.bson.types.ObjectId;
+import fr.snooker4real.movies.repository.MovieRepository;
+import fr.snooker4real.movies.model.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
