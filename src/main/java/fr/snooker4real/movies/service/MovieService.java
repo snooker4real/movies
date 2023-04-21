@@ -3,6 +3,9 @@ package fr.snooker4real.movies.service;
 import fr.snooker4real.movies.repository.MovieRepository;
 import fr.snooker4real.movies.model.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,4 +24,10 @@ public class MovieService {
     }
 
 
+    public Page<Movie> tenMoviesForCarousel() {
+        int carousel = 10;
+        return movieRepository.findAll(
+                PageRequest.of(0, carousel, Sort.by("imdbRating").descending())
+        );
+    }
 }
