@@ -30,4 +30,12 @@ public class MovieService {
                 PageRequest.of(0, carousel, Sort.by("imdbRating").descending())
         );
     }
+
+    public List<Movie> movieByGenres(String genres) {
+        return movieRepository.findMovieByGenres(genres);
+    }
+
+    public Movie save(Movie movie) {
+        return movieRepository.save(movie);
+    }
 }
