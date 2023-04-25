@@ -28,6 +28,11 @@ public class MovieController {
         return new ResponseEntity<>(movieService.allMovies(), HttpStatus.OK);
     }
 
+    @GetMapping(params = "limit")
+    public ResponseEntity<List<Movie>> getNMovies(@RequestParam("limit") int limit){
+        return new ResponseEntity<>(movieService.getMovies(limit), HttpStatus.OK);
+    }
+
     @GetMapping("/{imdbId}")
     public ResponseEntity<Optional<Movie>> getSingleMovieById(@PathVariable String imdbId) {
         return new ResponseEntity<>(movieService.singleMovie(imdbId), HttpStatus.OK);

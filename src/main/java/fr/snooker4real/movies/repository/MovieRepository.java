@@ -2,6 +2,7 @@ package fr.snooker4real.movies.repository;
 
 import fr.snooker4real.movies.model.Movie;
 import org.bson.types.ObjectId;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,4 +16,5 @@ public interface MovieRepository extends MongoRepository<Movie, ObjectId> {
 
     List<Movie> findMovieByGenres(String genres);
 
+    List<Movie> findTopNBy(Pageable pageable);
 }
