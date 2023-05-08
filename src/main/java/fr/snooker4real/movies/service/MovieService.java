@@ -1,7 +1,7 @@
 package fr.snooker4real.movies.service;
 
-import fr.snooker4real.movies.repository.MovieRepository;
 import fr.snooker4real.movies.model.Movie;
+import fr.snooker4real.movies.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
