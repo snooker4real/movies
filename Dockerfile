@@ -10,7 +10,7 @@ RUN mvn -f /home/app/pom.xml clean package
 #
 # Package stage
 #
-FROM alpine:3.17
+FROM alpine:3.18.12
 RUN apk add --no-cache &&\
         wget -O /etc/apk/keys/amazoncorretto.rsa.pub https://apk.corretto.aws/amazoncorretto.rsa.pub && \
         echo "https://apk.corretto.aws" >> /etc/apk/repositories && \
