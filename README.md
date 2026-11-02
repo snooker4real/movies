@@ -1,4 +1,29 @@
 # movies
+
 A movie backend API
 
-![Capture d’écran 2023-04-06 à 18 13 36](https://user-images.githubusercontent.com/65620947/230437098-1e89b2a7-0ea9-4737-b55c-b91185350c96.png)
+**Stack** : Java 17, Maven, Spring Boot 3.0.5, MongoDB, JUnit
+
+## Démarrage
+
+```bash
+./mvnw clean install   # construire et tester
+./mvnw spring-boot:run   # démarrer l'application
+./mvnw test   # lancer les tests
+```
+
+## Docker
+
+```bash
+docker build -t movies .
+```
+
+## Structure
+
+```
+src/
+Dockerfile
+mvnw
+mvnw.cmd
+pom.xml
+```
